@@ -89,6 +89,7 @@ module ExpenseTracker
           parsed = JSON.parse(last_response.body)
           expect(parsed).to be_empty
         end
+
         it 'responds with a 200 (OK)' do
           get '/expenses/2018-03-06'
           expect(last_response.status).to eq(200)
