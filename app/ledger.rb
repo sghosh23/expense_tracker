@@ -12,7 +12,8 @@ module ExpenseTracker
       RecordResult.new(true, id, nil)
     end
 
-    def expenses_on(expense)
+    def expenses_on(date)
+      DB[:expenses].where(date: date).all
     end
   end
 end
